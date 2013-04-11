@@ -60,6 +60,7 @@
             day = @"Wednesday";
         }
         
+        //output temperature and day
         NSLog(@"It will be %d degrees on %@.", degrees, day);
 
     }
