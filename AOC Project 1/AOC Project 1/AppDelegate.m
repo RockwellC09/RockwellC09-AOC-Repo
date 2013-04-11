@@ -51,7 +51,7 @@
     NSString *day;
     for (int i = 0; i < 3; i++) {
         //random number for the temperature
-        int degrees = 30 + arc4random() % 70 ;
+        int degrees = 30 + arc4random() % 70;
         if (i == 0){
             day = @"Monday";
         } else if (i == 1) {
@@ -68,7 +68,7 @@
     NSString *nDay;
     for (int x = 0; x < 5; x++) {
         //random number for the temperature
-        int nDegrees = 30 + arc4random() % 70 ;
+        int nDegrees = 30 + arc4random() % 70;
         //random number to check for raining
         int rain = arc4random() % 101;
         if (x == 0) {
@@ -93,6 +93,18 @@
             }
         }
     }
+    
+    //The meteoroligist is give the hour forcast for friday from 1 to 6 o'clock
+    int time = 1;
+    while (time < 7) {
+        //set random temperature
+        int randTemp = 30 + arc4random() % 70;
+        //output temp by hour
+        NSLog(@"It will be %d at %d o'clock Friday.", randTemp, time);
+        time++;
+    }
+    
+    
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
