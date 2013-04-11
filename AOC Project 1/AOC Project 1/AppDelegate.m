@@ -27,6 +27,9 @@
     //set int temperature variable
     int intTemp = (float)floatTemp;
     
+    //console log float and int temperature variables
+    NSLog(@"float: %.2f int: %d", floatTemp, intTemp);
+    
     // set todays temperature
     int tempToday = 60;
     
@@ -48,7 +51,7 @@
     NSString *day;
     for (int i = 0; i < 3; i++) {
         //random number for the temperature
-        int degrees = 30 + arc4random() % 60 ;
+        int degrees = 30 + arc4random() % 70 ;
         if (i == 0){
             day = @"Monday";
         } else if (i == 1) {
@@ -61,8 +64,35 @@
 
     }
     
-    //console log float and int temperature variables
-    NSLog(@"float: %.2f int: %d", floatTemp, intTemp);
+    //Now the meteorologist will predict the 5 day weather forcast for next week
+    NSString *nDay;
+    for (int x = 0; x < 5; x++) {
+        //random number for the temperature
+        int nDegrees = 30 + arc4random() % 70 ;
+        //random number to check for raining
+        int rain = arc4random() % 101;
+        if (x == 0) {
+            nDay = @"Sunday";
+        } else if (x == 1){
+            nDay = @"Monday";
+        } else if (x == 2) {
+            nDay = @"Tuesday";
+        } else if (x == 3) {
+            nDay = @"Wednesday";
+        } else if (x == 4) {
+            nDay = @"Thursday";
+        }
+        
+        NSLog(@"The temperature will be %d on %@ with a %d chance of rain.", nDegrees, nDay, rain);
+        
+        for (int a = 0; a < 1; a++) {
+            if (rain < 40) {
+                NSLog(@"Better bring a rain jacket just in case.");
+            } else {
+                NSLog(@"You'll need and rain jacket and rain boots!");
+            }
+        }
+    }
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
