@@ -25,7 +25,7 @@
     float floatTemp = 88.60f;
     
     //set int temperature variable
-    int intTemp = (float)floatTemp;
+    int intTemp = (int)floatTemp;
     
     //console log float and int temperature variables
     NSLog(@"float: %.2f int: %d", floatTemp, intTemp);
@@ -34,14 +34,14 @@
     int tempToday = 60;
     
     //see if it's raining outside
-    bool isRaining = YES;
+    BOOL isRaining = YES;
     
     //set chance of rain variable percent
     float rainChance = 55.60f;
     
-    if (tempToday < 50 && isRaining == NO) {
+    if ((tempToday < 50) && (isRaining == NO)) {
         NSLog(@"Looks like I'll need a jacket today.");
-    } else if (rainChance > 50 || isRaining == YES){
+    } else if ((rainChance > 50) || (isRaining == YES)){
         NSLog(@"Better put on a rain jacket today.");
     } else {
         NSLog(@"I can bring out my shorts today!");
