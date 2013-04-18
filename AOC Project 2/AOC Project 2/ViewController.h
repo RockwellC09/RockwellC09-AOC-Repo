@@ -13,6 +13,7 @@
     UILabel *title;
     UILabel *auth;
     UILabel *aText;
+    UILabel *pub;
     
 }
 

@@ -39,7 +39,15 @@
     //add author label to view
     [self.view addSubview:auth];
     
-    //create author text label and set properties
+    //create author name label and set properties
+    aText = [[UILabel alloc] initWithFrame:CGRectMake(110.0f, 70.0f, 150.0f, 40.0f)];
+    aText.text = @"Rockwell, Thomas";
+    aText.textAlignment = NSTextAlignmentLeft;
+    aText.backgroundColor = [UIColor colorWithRed:0.878 green:0.475 blue:0.475 alpha:1]; /*#e07979*/
+    aText.textColor = [UIColor colorWithRed:0.278 green:0.278 blue:0.278 alpha:1]; /*#474747*/
+    
+    //add author name label to view
+    [self.view addSubview:aText];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
