@@ -14,6 +14,8 @@
     UILabel *auth;
     UILabel *aText;
     UILabel *pub;
+    UILabel *pName;
+    UILabel *sum;
     
 }
 

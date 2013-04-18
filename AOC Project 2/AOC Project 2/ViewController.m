@@ -49,6 +49,28 @@
     //add author name label to view
     [self.view addSubview:aText];
     
+    //create publishing label and set properties
+    pub = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 120.0f, 100.0f, 40.f)];
+    pub.text = @"Publishing:";
+    pub.textAlignment = NSTextAlignmentRight;
+    pub.backgroundColor = [UIColor colorWithRed:0.859 green:0.859 blue:0.859 alpha:1]; /*#dbdbdb*/
+    pub.textColor = [UIColor colorWithRed:0.271 green:0.271 blue:0.271 alpha:1]; /*#454545*/
+    
+    //add publishing label to view
+    [self.view addSubview:pub];
+    
+    //create publishing name label and set properties
+    pName = [[UILabel alloc] initWithFrame:CGRectMake(130.0f, 120.0f, 150.0f, 40.0f)];
+    pName.text = @"Random House Childrens Books";
+    pName.numberOfLines = 2;
+    pName.textAlignment = NSTextAlignmentLeft;
+    pName.backgroundColor = [UIColor colorWithRed:0.078 green:0.278 blue:0.439 alpha:1]; /*#144770*/
+    pName.textColor = [UIColor colorWithRed:0.506 green:0.663 blue:0.788 alpha:1]; /*#81a9c9*/
+    
+    //add publishing name label to view
+    [self.view addSubview:pName];
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
