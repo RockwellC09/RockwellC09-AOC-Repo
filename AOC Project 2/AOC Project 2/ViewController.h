@@ -12,7 +12,7 @@
 {
     UILabel *title;
     UILabel *auth;
-    UILabel *aText;
+    UILabel *aName;
     UILabel *pub;
     UILabel *pName;
     UILabel *sum;
