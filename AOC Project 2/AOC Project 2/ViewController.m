@@ -70,6 +70,45 @@
     //add publishing name label to view
     [self.view addSubview:pName];
     
+    //create summary label and set properties
+    summ = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 170.0, 100.0f, 40.0f)];
+    summ.text = @"Summary";
+    summ.textAlignment = NSTextAlignmentLeft;
+    summ.backgroundColor = [UIColor colorWithRed:0.18 green:0.047 blue:0.412 alpha:1]; /*#2e0c69*/
+    summ.textColor = [UIColor colorWithRed:0.706 green:0.639 blue:0.82 alpha:1]; /*#b4a3d1*/
+    
+    //add summary label to view
+    [self.view addSubview:summ];
+    
+    //create summary text label and set properties
+    summText = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 220.0f, 280.0f, 80.0f)];
+    summText.text = @"Because of a bet, Billy is in the uncomfortable position of having to eat fifteen worms in fifteen days.";
+    summText.textAlignment = NSTextAlignmentCenter;
+    summText.numberOfLines = 3;
+    summText.backgroundColor = [UIColor colorWithRed:0.388 green:0.294 blue:0.196 alpha:1]; /*#634b32*/
+    summText.textColor = [UIColor colorWithRed:0.251 green:0.537 blue:0.631 alpha:1]; /*#4089a1*/
+    
+    //add summary text to view
+    [self.view addSubview:summText];
+    
+    //create array of items
+    NSArray *items = [NSArray arrayWithObjects:@"worms", @"peanut butter", @"horseradish", @"condiments", @"food", nil];
+    
+    //create NSmutableString and allocate it
+    NSMutableString *mutString = [[NSMutableString alloc] init];
+    
+    //loop through the items array and append it to a mutable string
+    for (int i = 0; i < 5; i++) {
+        if (i == 4) {
+            [mutString appendString:@"and "];
+            [mutString appendString:[items objectAtIndex: i]];
+        } else {
+            [mutString appendString:[items objectAtIndex: i]];
+            [mutString appendString:@", "];
+        }
+    }
+    
+    //create items label
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

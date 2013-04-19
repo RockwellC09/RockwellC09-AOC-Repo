@@ -15,7 +15,8 @@
     UILabel *aName;
     UILabel *pub;
     UILabel *pName;
-    UILabel *sum;
+    UILabel *summ;
+    UILabel *summText;
     
 }
 
