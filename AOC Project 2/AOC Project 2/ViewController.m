@@ -81,10 +81,10 @@
     [self.view addSubview:summ];
     
     //create summary text label and set properties
-    summText = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 220.0f, 280.0f, 80.0f)];
-    summText.text = @"Because of a bet, Billy is in the uncomfortable position of having to eat fifteen worms in fifteen days.";
+    summText = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 220.0f, 280.0f, 110.0f)];
+    summText.text = @"Billy made a bet to eat 15 worms in 15 days for $50 to buy a mini bike. Although Alan and Joe cheated, Billy eats all 15 worms and buys the mini bike.";
     summText.textAlignment = NSTextAlignmentCenter;
-    summText.numberOfLines = 3;
+    summText.numberOfLines = 5;
     summText.backgroundColor = [UIColor colorWithRed:0.388 green:0.294 blue:0.196 alpha:1]; /*#634b32*/
     summText.textColor = [UIColor colorWithRed:0.251 green:0.537 blue:0.631 alpha:1]; /*#4089a1*/
     
@@ -109,7 +109,7 @@
     }
     
     //create items label and set properties
-    itemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 310.0f, 100.0, 40.0f)];
+    itemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 340.0f, 100.0, 40.0f)];
     itemsLabel.text = @"List of items";
     itemsLabel.textAlignment = NSTextAlignmentLeft;
     itemsLabel.backgroundColor = [UIColor colorWithRed:0.859 green:0.792 blue:0.678 alpha:1]; /*#dbcaad*/
@@ -119,7 +119,7 @@
     [self.view addSubview:itemsLabel];
     
     //create items text label and set properties
-    itemsText = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 360.0f, 280.0f, 60.0f)];
+    itemsText = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 390.0f, 280.0f, 60.0f)];
     itemsText.text = mutString;
     itemsText.numberOfLines = 2;
     itemsText.textAlignment = NSTextAlignmentCenter;
