@@ -41,7 +41,7 @@
     
     //create author name label and set properties
     aName = [[UILabel alloc] initWithFrame:CGRectMake(110.0f, 70.0f, 150.0f, 40.0f)];
-    aName.text = @"Rockwell, Thomas";
+    aName.text = @"Thomas Rockwell";
     aName.textAlignment = NSTextAlignmentLeft;
     aName.backgroundColor = [UIColor colorWithRed:0.878 green:0.475 blue:0.475 alpha:1]; /*#e07979*/
     aName.textColor = [UIColor colorWithRed:0.278 green:0.278 blue:0.278 alpha:1]; /*#474747*/
@@ -108,7 +108,26 @@
         }
     }
     
-    //create items label
+    //create items label and set properties
+    itemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 310.0f, 120.0, 40.0f)];
+    itemsLabel.text = @"List of items";
+    itemsLabel.textAlignment = NSTextAlignmentLeft;
+    itemsLabel.backgroundColor = [UIColor colorWithRed:0.859 green:0.792 blue:0.678 alpha:1]; /*#dbcaad*/
+    itemsLabel.textColor = [UIColor colorWithRed:0.729 green:0.286 blue:0.286 alpha:1]; /*#ba4949*/
+    
+    //add items label to view
+    [self.view addSubview:itemsLabel];
+    
+    //create items text label and set properties
+    itemsText = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 360.0f, 200.0f, 80.0f)];
+    itemsText.text = mutString;
+    itemsText.numberOfLines = 3;
+    itemsText.textAlignment = NSTextAlignmentCenter;
+    itemsText.backgroundColor = [UIColor colorWithRed:0.51 green:0.659 blue:0.82 alpha:1]; /*#82a8d1*/
+    itemsText.textColor = [UIColor colorWithRed:0.075 green:0.216 blue:0.369 alpha:1]; /*#13375e*/
+    
+    //add items text label to view
+    [self.view addSubview:itemsText];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

@@ -17,6 +17,8 @@
     UILabel *pName;
     UILabel *summ;
     UILabel *summText;
+    UILabel *itemsLabel;
+    UILabel *itemsText;
     
 }
 
