@@ -20,7 +20,7 @@
     self.view.backgroundColor = [UIColor colorWithRed:0.18 green:0.18 blue:0.18 alpha:1]; /*#2e2e2e*/
     
     //create title label and set properties
-    title = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 20.f, 200.0f, 40.0f)];
+    title = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 20.f, 280.0f, 40.0f)];
     title.text = @"How to Eat Fried Worms";
     title.textAlignment = NSTextAlignmentCenter;
     title.backgroundColor = [UIColor whiteColor];
@@ -30,7 +30,7 @@
     [self.view addSubview:title];
     
     //create author label and set properties
-    auth = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 70.0f, 80.0f, 40.0f)];
+    auth = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 70.0f, 100.0f, 40.0f)];
     auth.text = @"Author:";
     auth.textAlignment = NSTextAlignmentRight;
     auth.backgroundColor = [UIColor colorWithRed:0.541 green:0.133 blue:0.133 alpha:1]; /*#8a2222*/
@@ -40,7 +40,7 @@
     [self.view addSubview:auth];
     
     //create author name label and set properties
-    aName = [[UILabel alloc] initWithFrame:CGRectMake(110.0f, 70.0f, 150.0f, 40.0f)];
+    aName = [[UILabel alloc] initWithFrame:CGRectMake(130.0f, 70.0f, 170.0f, 40.0f)];
     aName.text = @"Thomas Rockwell";
     aName.textAlignment = NSTextAlignmentLeft;
     aName.backgroundColor = [UIColor colorWithRed:0.878 green:0.475 blue:0.475 alpha:1]; /*#e07979*/
@@ -50,7 +50,7 @@
     [self.view addSubview:aName];
     
     //create publishing label and set properties
-    pub = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 120.0f, 100.0f, 40.f)];
+    pub = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 120.0f, 100.0f, 40.0f)];
     pub.text = @"Publishing:";
     pub.textAlignment = NSTextAlignmentRight;
     pub.backgroundColor = [UIColor colorWithRed:0.859 green:0.859 blue:0.859 alpha:1]; /*#dbdbdb*/
@@ -60,7 +60,7 @@
     [self.view addSubview:pub];
     
     //create publishing name label and set properties
-    pName = [[UILabel alloc] initWithFrame:CGRectMake(130.0f, 120.0f, 150.0f, 40.0f)];
+    pName = [[UILabel alloc] initWithFrame:CGRectMake(130.0f, 120.0f, 170.0f, 40.0f)];
     pName.text = @"Random House Childrens Books";
     pName.numberOfLines = 2;
     pName.textAlignment = NSTextAlignmentLeft;
@@ -109,7 +109,7 @@
     }
     
     //create items label and set properties
-    itemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 310.0f, 120.0, 40.0f)];
+    itemsLabel = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 310.0f, 100.0, 40.0f)];
     itemsLabel.text = @"List of items";
     itemsLabel.textAlignment = NSTextAlignmentLeft;
     itemsLabel.backgroundColor = [UIColor colorWithRed:0.859 green:0.792 blue:0.678 alpha:1]; /*#dbcaad*/
@@ -119,9 +119,9 @@
     [self.view addSubview:itemsLabel];
     
     //create items text label and set properties
-    itemsText = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 360.0f, 200.0f, 80.0f)];
+    itemsText = [[UILabel alloc] initWithFrame:CGRectMake(20.0f, 360.0f, 280.0f, 60.0f)];
     itemsText.text = mutString;
-    itemsText.numberOfLines = 3;
+    itemsText.numberOfLines = 2;
     itemsText.textAlignment = NSTextAlignmentCenter;
     itemsText.backgroundColor = [UIColor colorWithRed:0.51 green:0.659 blue:0.82 alpha:1]; /*#82a8d1*/
     itemsText.textColor = [UIColor colorWithRed:0.075 green:0.216 blue:0.369 alpha:1]; /*#13375e*/
