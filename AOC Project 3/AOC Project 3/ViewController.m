@@ -31,7 +31,7 @@
     //call DisplayAlertWithString and send it the alert info/string
     [self DisplayAlertWithString: [NSString stringWithFormat:@"The number is %@", stringNum]];
     
-    //call compare function in and send two values
+    //call the compare function and send it two values
     [self compare:23 numTwo:23];
     
     [super viewDidLoad];

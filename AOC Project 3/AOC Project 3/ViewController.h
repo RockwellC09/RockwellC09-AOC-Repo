@@ -16,5 +16,6 @@
 -(int)add:(int)numOne numTwo:(int)numTwo;
 -(BOOL)compare: (int)numOne numTwo :(int)numTwo;
 -(void)DisplayAlertWithString: (NSString*)string;
+-(NSString*)append:(NSString*)stringOne stringTwo:(NSString*) stringTwo;
 
 @end
