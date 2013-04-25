@@ -23,16 +23,21 @@
     
     //call add function, pass it two values, and set it equal to sum
     int sum = [self add:5 numTwo:10];
-    //bundle sum vaiable into NSNumer
+    //bundle sum variable into NSNumber
     NSNumber *number = [[NSNumber alloc] initWithInt:sum];
-    //convert number vatiable to a string
+    //convert number variable to a string
     NSString *stringNum = [number stringValue];
     
     //call DisplayAlertWithString and send it the alert info/string
     [self DisplayAlertWithString: [NSString stringWithFormat:@"The number is %@", stringNum]];
     
+    //set two int variable to send to the compare function
+    int firstNum = 23;
+    int secondNum = 23;
     //call the compare function and send it two values
-    [self compare:23 numTwo:23];
+    if ([self compare:firstNum numTwo:secondNum] == YES) {
+        [self DisplayAlertWithString:[NSString stringWithFormat:@"%d and %d are equal.", firstNum, secondNum]];
+    }
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -46,7 +51,6 @@
 //function that checks two integers to see if they're equal or not and returns YES or NO
 -(BOOL)compare: (int)numOne numTwo :(int)numTwo {
     if (numOne == numTwo) {
-        [self DisplayAlertWithString:[NSString stringWithFormat:@"%d and %d are equal.", numOne, numTwo]];
         return YES;
     } else {
         return NO;
