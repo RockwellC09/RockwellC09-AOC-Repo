@@ -17,8 +17,9 @@
 - (void)viewDidLoad
 {
     //call the append method, send it two strings
-    NSString *appendedStr = [self append:@"I love to" stringTwo:@"append strings."];
-    
+    NSString *appendedStr = [self append:@"I love to " stringTwo:@"append strings."];
+    //call DisplayAlertWithString and send it the appendedStr variable to alert
+    [self DisplayAlertWithString:appendedStr];
     
     //call add function, pass it two values, and set it equal to sum
     int sum = [self add:5 numTwo:10];
