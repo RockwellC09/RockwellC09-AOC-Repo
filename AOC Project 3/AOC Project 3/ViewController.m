@@ -23,7 +23,7 @@
     
     //call add function, pass it two values, and set it equal to sum
     int sum = [self add:5 numTwo:10];
-    //bundle sum into NSNumer
+    //bundle sum vaiable into NSNumer
     NSNumber *number = [[NSNumber alloc] initWithInt:sum];
     //convert number vatiable to a string
     NSString *stringNum = [number stringValue];
