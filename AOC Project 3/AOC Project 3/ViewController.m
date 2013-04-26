@@ -34,7 +34,7 @@
     //set two int variable to send to the compare function
     int firstNum = 23;
     int secondNum = 23;
-    //call the compare function and send it two values
+    //call the compare function and send it two integer values
     if ([self compare:firstNum numTwo:secondNum] == YES) {
         [self DisplayAlertWithString:[NSString stringWithFormat:@"%d and %d are equal.", firstNum, secondNum]];
     }
@@ -57,7 +57,7 @@
     }
 }
 
-//function that appends two NSString and returns them
+//function that appends two NSStrings and returns them
 -(NSString*)append:(NSString*)stringOne stringTwo:(NSString*) stringTwo {
     NSMutableString *strings = [[NSMutableString alloc] init];
     
@@ -66,7 +66,7 @@
     return strings;
 }
 
-//displays the data sent to it in an UIAlertView
+//this function displays the data sent to it in an UIAlertView
 -(void)DisplayAlertWithString: (NSString*)string {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:string message:nil delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
     if (alert != nil) {
