@@ -11,6 +11,8 @@
 @interface ViewController : UIViewController
 {
     UIButton *login;
+    UIButton *dateButton;
+    UIButton *infoButton;
     UITextField *userTextField;
     UILabel *prompt;
 }

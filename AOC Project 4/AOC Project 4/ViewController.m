@@ -38,7 +38,8 @@
     [login setTitle:@"Login" forState:UIControlStateNormal];
     [login setTitleColor:[UIColor colorWithRed:0.196 green:0.392 blue:0.529 alpha:1] /*#326487*/
                 forState:UIControlStateNormal];
-    [login addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
+    login.tag = 1;
+    [login addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:login];
     
     //create user prompt label and set properties
@@ -50,20 +51,57 @@
     prompt.numberOfLines = 2;
     [self.view addSubview:prompt];
     
+    //create show date button and set properties
+    dateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    dateButton.frame = CGRectMake(10.0f, 250.0f, 100.0f, 40.0f);
+    [dateButton setTitle:@"Show Date" forState:UIControlStateNormal];
+    [dateButton setTitleColor:[UIColor colorWithRed:0.196 green:0.392 blue:0.529 alpha:1] /*#326487*/ forState:UIControlStateNormal];
+    dateButton.tag = 2;
+    [dateButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:dateButton];
+    
+    //create info button and set properties
+    infoButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
+    infoButton.frame = CGRectMake(10.0f, 320.0f, 20.0f, 20.0f);
+    infoButton.tag = 3;
+    [infoButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:(infoButton)];
+    
+    //create info label and set properties
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 //function that runs when the login when the login button is clicked
--(void)onClick {
-    //get the username text field info and set it to usernameText
-    NSString *usernameText = [userTextField text];
-    
-    //check if username has text or not and prompt user
-    if (userTextField.text.length == 0) {
-        prompt.text = @"Username cannot be empty";
-    } else if (userTextField.text.length > 0) {
-        prompt.text = [NSString stringWithFormat:@"User: %@ has been logged in", usernameText];
+-(void)onClick: (UIButton*)thisButton  {
+    //check to see if login button was clicked
+    if (thisButton.tag == 1) {
+        //get the username text field info and set it to usernameText
+        NSString *usernameText = [userTextField text];
+        
+        //check if username has text or not and prompt user
+        if (userTextField.text.length == 0) {
+            prompt.text = @"Username cannot be empty";
+        } else if (userTextField.text.length > 0) {
+            prompt.text = [NSString stringWithFormat:@"User: %@ has been logged in", usernameText];
+        }
     }
+    
+    //check to see if show date button was clicked
+    if (thisButton.tag == 2) {
+        //create variable that contains today's date and format it
+        NSDate *date = [NSDate date];
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"MMMM dd, y hh:mm:ss a zzzz"];
+        UIAlertView *dateAlert = [[UIAlertView alloc] initWithTitle:@"Date" message:([dateFormat stringFromDate:date]) delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [dateAlert show];
+    }
+    
+    //check to seeinfo button was clicked
+    if (thisButton.tag == 3) {
+        
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
