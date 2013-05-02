@@ -24,11 +24,10 @@
     username.backgroundColor = [UIColor colorWithRed:0.922 green:0.922 blue:0.922 alpha:1]; /*#ebebeb*/
     username.textColor = [UIColor colorWithRed:0.196 green:0.392 blue:0.529 alpha:1]; /*#326487*/
     username.text = @"Username:";
-    username.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:username];
     
     //create username text field and set properties
-    userTextField = [[UITextField alloc] initWithFrame:CGRectMake(120.0f, 10.0f, 180.0f, 30.0f)];
+    userTextField = [[UITextField alloc] initWithFrame:CGRectMake(100.0f, 10.0f, 200.0f, 30.0f)];
     userTextField.borderStyle = UITextBorderStyleRoundedRect;
     [self.view addSubview:userTextField];
     
@@ -65,14 +64,21 @@
     infoButton.frame = CGRectMake(10.0f, 320.0f, 20.0f, 20.0f);
     infoButton.tag = 3;
     [infoButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:(infoButton)];
+    [self.view addSubview:infoButton];
     
     //create info label and set properties
+    infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(
+                                                          0.0f, 360.0f, self.view.frame.size.width, 70.0f)];
+    infoLabel.backgroundColor = [UIColor whiteColor];
+    infoLabel.textColor = [UIColor colorWithRed:0.196 green:0.392 blue:0.529 alpha:1]; /*#326487*/
+    infoLabel.textAlignment = NSTextAlignmentCenter;
+    infoLabel.numberOfLines = 2;
+    [self.view addSubview:infoLabel];
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
-//function that runs when the login when the login button is clicked
+//function that runs when the login button is clicked
 -(void)onClick: (UIButton*)thisButton  {
     //check to see if login button was clicked
     if (thisButton.tag == 1) {
@@ -85,6 +91,8 @@
         } else if (userTextField.text.length > 0) {
             prompt.text = [NSString stringWithFormat:@"User: %@ has been logged in", usernameText];
         }
+        //hide keyboard
+        [self.view endEditing:YES];
     }
     
     //check to see if show date button was clicked
@@ -97,9 +105,9 @@
         [dateAlert show];
     }
     
-    //check to seeinfo button was clicked
+    //check to see if the info button was clicked
     if (thisButton.tag == 3) {
-        
+        infoLabel.text = @"This application was created by: Christopher Rockwell";
     }
     
 }

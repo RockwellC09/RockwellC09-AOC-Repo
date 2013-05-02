@@ -13,6 +13,7 @@
     UIButton *login;
     UIButton *dateButton;
     UIButton *infoButton;
+    UILabel *infoLabel;
     UITextField *userTextField;
     UILabel *prompt;
 }
