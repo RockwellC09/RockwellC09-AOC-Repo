@@ -42,11 +42,12 @@
     [self.view addSubview:login];
     
     //create user prompt label and set properties
-    prompt = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 110.0f, self.view.frame.size.width, 60.0f)];
+    prompt = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 110.0f, self.view.frame.size.width, 70.0f)];
     prompt.backgroundColor = [UIColor colorWithRed:0.196 green:0.392 blue:0.529 alpha:1]; /*#326487*/
-    prompt.textColor = [UIColor whiteColor];
     prompt.text = @"Please Enter Username";
+    prompt.textColor = [UIColor whiteColor];
     prompt.textAlignment = NSTextAlignmentCenter;
+    prompt.numberOfLines = 2;
     [self.view addSubview:prompt];
     
     [super viewDidLoad];
@@ -58,9 +59,9 @@
     NSString *usernameText = [userTextField text];
     
     //check if username has text or not and prompt user
-    if (userTextField.text == nil) {
+    if (userTextField.text.length == 0) {
         prompt.text = @"Username cannot be empty";
-    } else if (userTextField != nil) {
+    } else if (userTextField.text.length > 0) {
         prompt.text = [NSString stringWithFormat:@"User: %@ has been logged in", usernameText];
     }
 }
